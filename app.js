@@ -11,3 +11,13 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server established at ${PORT}`);
 })
+
+app.put("/put", (req, res) => {
+    console.log("Put Request Successfull!")
+    console.log(req.body)
+    res.send("Data Update Request Revieved")
+})
+
+app.listen(PORT, () => {
+    console.log(`Server established at ${PORT}`);
+})
