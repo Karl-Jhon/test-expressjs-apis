@@ -20,6 +20,12 @@ app.post("/post", (req, res) => {
     res.send("Data Update Request Revieved")
 })
 
+app.delete("/delete", (req, res) => {
+    console.log("DELETE Request Successfull!")
+    console.log(req.body)
+    res.send("Data DELETE Request Revieved")
+})
+
 app.listen(PORT, () => {
     console.log(`Server established at ${PORT}`);
 })
