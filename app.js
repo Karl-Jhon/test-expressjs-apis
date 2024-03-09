@@ -8,12 +8,14 @@ app.get("/", (req, res) => {
     res.send("Get Req Successfully initiated")
 })
 
-app.listen(PORT, () => {
-    console.log(`Server established at ${PORT}`);
-})
-
 app.put("/put", (req, res) => {
     console.log("Put Request Successfull!")
+    console.log(req.body)
+    res.send("Data Update Request Revieved")
+})
+
+app.post("/post", (req, res) => {
+    console.log("Post Request Successfull!")
     console.log(req.body)
     res.send("Data Update Request Revieved")
 })
